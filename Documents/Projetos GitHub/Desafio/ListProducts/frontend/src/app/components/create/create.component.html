@@ -1,0 +1,23 @@
+<div class="container mt-5">
+
+  <form [formGroup]="productForm" (ngSubmit)="productRegister()">
+
+   <div class="col-lg-6 mt-2">
+      <input type="text" class="form-control"  formControlName="name" placeholder="Insira o nome do produto">
+   </div>
+   <div class="col-lg-6 mt-2">
+    <input type="text" class="form-control" formControlName="price" placeholder="Insira o preço do produto">
+ </div>
+
+<select class="form-select mt-2" formControlName="category">
+  <option value="" disabled selected>Selecione a categoria</option>
+  <option *ngFor="let categoria of categoryList" value= {{categoria.description}}>
+    {{categoria.description}}
+
+</select>
+<div class="col-lg-6 mt-2"><button class="btn btn-success btn-sm">Registrar Produto</button></div>
+  </form>
+
+</div>
+
+

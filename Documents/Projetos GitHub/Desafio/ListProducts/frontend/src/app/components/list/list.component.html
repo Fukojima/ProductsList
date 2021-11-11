@@ -1,0 +1,24 @@
+
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = 'let data of listData; let i = index' >
+      <th scope="row">{{i+1}}</th>
+      <td>{{data.name}}</td>
+      <td>{{data.category}}</td>
+      <td>{{data.price}}</td>
+      <td><button  (click)="delete(data._id)" class="btn btn-danger  mt-2">Deletar</button> </td>
+    </tr>
+
+  </tbody>
+</table>
